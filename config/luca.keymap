@@ -123,7 +123,7 @@
     &kp N0 &kp Q       &kp W       &kp F       &kp P       &kp B           &lt MSE J &kp L     &kp U       &kp Y       &kp SQT     &kp N4
     &kp N1 &hm LCTRL A &hs LALT R  &hm LGUI S  &hf LSHFT T &kp G           &kp M   &hf RSHFT N &hm RGUI E  &hs LALT I  &hm RCTRL O &kp N5
     &kp N2 &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K   &kp H       &kp COMMA   &kp DOT     &kp FSLH    &kp N6
-    &kp N3 &kp LS(H)   &kp LS(L)   &mo NUM     &lt SYM ESC &lt NAV BSPC &mo MSE    &mo MSE &lt NAV SPACE &lt VIM ENTER &mo WIN &kp LG(LS(LBKT))  &kp LG(LS(RBKT))
+    &kp N1 &kp N2   &kp N3   &kp N4   &kp N5 &kp N6                        &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6
             >;
         };
 
