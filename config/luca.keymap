@@ -123,7 +123,7 @@
     &kp N0 &kp Q       &kp W       &kp F       &kp P       &kp B           &lt MSE J &kp L     &kp U       &kp Y       &kp SQT     &kp N4
     &kp N1 &hm LCTRL A &hs LALT R  &hm LGUI S  &hf LSHFT T &kp G           &kp M   &hf RSHFT N &hm RGUI E  &hs LALT I  &hm RCTRL O &kp N5
     &kp N2 &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K   &kp H       &kp COMMA   &kp DOT     &kp FSLH    &kp N6
-    &kp N3 &kp LS(H)   &kp LS(L)   &mo NUM     &lt SYM ESC &lt NAV BSPC &mo MSE    &mo MSE &lt NAV SPACE &lt VIM ENTER &mo WIN &kp LG(LS(LBKT))  &kp LG(LS(RBKT))
+    &kp LS(H) &kp LS(L) &mo NUM    &lt SYM ESC &lt NAV BSPC &mo MSE        &kp ESC &lt NAV SPACE &lt MSE ENTER &mo WIN &kp LG(LS(LBKT)) &kp LG(LS(RBKT))
             >;
         };
 
@@ -164,9 +164,9 @@
 
         mse_layer {
             bindings = <
-   &trans   &trans    &trans         &none       &msc SCRL_UP  &trans                &none    &none    &none    &none   &none   &trans
-   &trans   &msc SCRL_LEFT &mkp MB2  &mkp MB3    &mkp MB1      &msc SCRL_RIGHT       &none    &trans   &trans   &trans  &trans  &trans
-   &trans   &trans    &trans         &trans      &msc SCRL_DOWN &trans               &none    &none    &none    &none   &none  &trans
+   &trans &trans  &none          &mmv MOVE_UP   &none           &trans       &trans          &msc SCRL_UP    &trans    &trans   &trans &trans
+   &trans &trans  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans       &msc SCRL_LEFT  &mkp MB1        &mkp MB3  &mkp MB2 &msc SCRL_RIGHT &trans
+   &trans &trans  &trans         &trans         &trans          &trans       &trans          &msc SCRL_DOWN  &trans    &trans   &trans &trans
    &trans   &trans    &trans         &kp LCTRL   &kp LGUI      &kp LSFT              &none    &none    &none    &none   &none  &trans
             >;
       };
