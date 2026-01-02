@@ -1398,7 +1398,7 @@
             <mxPoint x="-227.99" y="520" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="P84tTS-qa6b7QJLw65sh-5" value="Trackball SDIO" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="P84tTS-qa6b7QJLw65sh-2">
+        <mxCell id="P84tTS-qa6b7QJLw65sh-5" value="s" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="P84tTS-qa6b7QJLw65sh-2">
           <mxGeometry x="0.095" y="2" relative="1" as="geometry">
             <mxPoint x="-39" as="offset" />
           </mxGeometry>
