@@ -176,7 +176,7 @@ sym:
    &trans &trans  &none          &mmv MOVE_UP   &none           &trans       &trans          &msc SCRL_UP    &trans    &trans   &trans &trans
    &trans &trans  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans       &msc SCRL_LEFT  &mkp MB1        &mkp MB3  &mkp MB2 &msc SCRL_RIGHT &trans
    &trans &trans  &trans         &trans         &trans          &trans       &trans          &msc SCRL_DOWN  &trans    &trans   &trans &trans
-   &trans &trans  &trans         &kp LCTRL      &kp LSFT        &kp LGUI     &kp RGUI        &kp LSFT        &kp LCTRL &none    &none  &trans
+   &trans &trans  &trans         &kp LCTRL      &kp LSFT        &kp LGUI     &kp RGUI        &kp RSFT        &kp RCTRL &none    &none  &trans
             >;
       };
         vim_layer {
