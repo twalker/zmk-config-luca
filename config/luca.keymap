@@ -130,7 +130,7 @@ sym:
 
             bindings = <
     &kp N0 &kp Q       &kp W       &kp F       &kp P       &kp B           &lt MSE J &kp L     &kp U       &kp Y       &kp SQT     &kp N4
-    &kp ESC &hml LCTRL A &hml LALT R  &hml LGUI S  &hml LSHFT T &kp G       &kp M   &hmr RSHFT N &hmr RGUI E  &hmr LALT I  &hmr RCTRL O &kp &kp SQT
+    &kp ESC &hml LCTRL A &hml LALT R  &hml LGUI S  &hml LSHFT T &kp G       &kp M   &hmr RSHFT N &hmr RGUI E  &hmr LALT I  &hmr RCTRL O &kp SQT
     &kp N2 &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K   &kp H       &kp COMMA   &kp DOT     &kp FSLH    &kp N6
     &kp LS(H) &kp LS(L) &mo NUM    &lt SYM ESC &lt NAV BSPC &mo MSE        &kp ESC &lt NAV SPACE &lt MSE ENTER &mo WIN &kp LG(LS(LBKT)) &kp LG(LS(RBKT))
             >;
