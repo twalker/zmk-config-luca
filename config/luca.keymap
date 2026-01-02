@@ -111,18 +111,18 @@
  * ,-----------------------------------------.                      ,-----------------------------------------.
  * |  ?   |   Q  |   W  |   F  |   P  |   B  |                      |   J  |   L  |   U  |   Y  |   '  |   ?  |
  * |------+------+------+------+------+------|                      |------+------+------+------+------+------|
- * |  ?   |   A  |   R  |   S  |   T  |   G  |                      |   M  |   N  |   E  |   I  |   O  |   ?  |
+ * | ESC* |   A  |   R  |   S  |   T  |   G  |                      |   M  |   N  |   E  |   I  |   O  |   '* |
  * |------+------+------+------+------+------|                      |------+------+------+------+------+------|
  * |  ?   |   Z  |   X  |   C  |   D  |   V  |                      |   K  |   H  |   ,  |   .  |   /  |   ?  |
  * `-----------------------------------------'                      `-----------------------------------------'
    ,-----------------------------------------.                      ,-----------------------------------------.
- * |  ?   |   ?  |  NUM | SYM |  NAV |  MSE  |                      |  MSE | NAV  | VIM  | WIN  |  ?   |  ?   |
+ * |  ?   |   ?  |  NUM | SYM |  NAV |  MSE  |                      |  ESC | NAV  | VIM  | WIN  |  ?   |  ?   |
  * `-----------------------------------------'                      `-----------------------------------------'
  */
 
             bindings = <
     &kp N0 &kp Q       &kp W       &kp F       &kp P       &kp B           &lt MSE J &kp L     &kp U       &kp Y       &kp SQT     &kp N4
-    &kp N1 &hml LCTRL A &hml LALT R  &hml LGUI S  &hml LSHFT T &kp G       &kp M   &hmr RSHFT N &hmr RGUI E  &hmr LALT I  &hmr RCTRL O &kp N5
+    &kp ESC &hml LCTRL A &hml LALT R  &hml LGUI S  &hml LSHFT T &kp G       &kp M   &hmr RSHFT N &hmr RGUI E  &hmr LALT I  &hmr RCTRL O &kp &kp SQT
     &kp N2 &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K   &kp H       &kp COMMA   &kp DOT     &kp FSLH    &kp N6
     &kp LS(H) &kp LS(L) &mo NUM    &lt SYM ESC &lt NAV BSPC &mo MSE        &kp ESC &lt NAV SPACE &lt MSE ENTER &mo WIN &kp LG(LS(LBKT)) &kp LG(LS(RBKT))
             >;
