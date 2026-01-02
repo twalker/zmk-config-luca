@@ -19,32 +19,33 @@
 / {
 
     behaviors {
-        hm: homerow_mods {
+
+        hml: hml {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
+            label = "HOME_ROW_LEFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 42 43 44 45 46 47>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <120>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+        };
+
+        hmr: hmr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOME_ROW_RIGHT";
+            bindings = <&kp>, <&kp>;
+
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            quick-tap-ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-        hs: homerow_mods_slow {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_SLOW";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-        hf: homerow_mods_fast {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_FAST";
-            #binding-cells = <2>;
-            tapping-term-ms = <110>;
-            quick-tap-ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <120>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41>;
+            hold-trigger-on-release;
         };
     };
 
@@ -110,18 +111,26 @@
  * ,-----------------------------------------.                      ,-----------------------------------------.
  * |  ?   |   Q  |   W  |   F  |   P  |   B  |                      |   J  |   L  |   U  |   Y  |   '  |   ?  |
  * |------+------+------+------+------+------|                      |------+------+------+------+------+------|
- * |  ?   |   A  |   R  |   S  |   T  |   G  |                      |   M  |   N  |   E  |   I  |   O  |   ?  |
+ * | ESC  |   A  |   R  |   S  |   T  |   G  |                      |   M  |   N  |   E  |   I  |   O  |   '  |
  * |------+------+------+------+------+------|                      |------+------+------+------+------+------|
  * |  ?   |   Z  |   X  |   C  |   D  |   V  |                      |   K  |   H  |   ,  |   .  |   /  |   ?  |
  * `-----------------------------------------'                      `-----------------------------------------'
    ,-----------------------------------------.                      ,-----------------------------------------.
- * |  ?   |   ?  |  NUM | SYM |  NAV |  MSE  |                      |  MSE | NAV  | VIM  | WIN  |  ?   |  ?   |
+ * |  ?   |   ?  |  NUM | SYM |  NAV |  MSE  |                      |  ESC | NAV  | VIM  | WIN  |  ?   |  ?   |
  * `-----------------------------------------'                      `-----------------------------------------'
  */
+/*
+6 col adjustments:
+default:
+    * add esc to outer pinkie
+    * add apostrophy to outer R pinkie
+sym:
+    * add less than/greater than to L inner bottow row
+*/
 
             bindings = <
     &kp N0 &kp Q       &kp W       &kp F       &kp P       &kp B           &lt MSE J &kp L     &kp U       &kp Y       &kp SQT     &kp N4
-    &kp N1 &hm LCTRL A &hs LALT R  &hm LGUI S  &hf LSHFT T &kp G           &kp M   &hf RSHFT N &hm RGUI E  &hs LALT I  &hm RCTRL O &kp N5
+    &kp ESC &hml LCTRL A &hml LALT R  &hml LGUI S  &hml LSHFT T &kp G       &kp M   &hmr RSHFT N &hmr RGUI E  &hmr LALT I  &hmr RCTRL O &kp SQT
     &kp N2 &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K   &kp H       &kp COMMA   &kp DOT     &kp FSLH    &kp N6
     &kp LS(H) &kp LS(L) &mo NUM    &lt SYM ESC &lt NAV BSPC &mo MSE        &kp ESC &lt NAV SPACE &lt MSE ENTER &mo WIN &kp LG(LS(LBKT)) &kp LG(LS(RBKT))
             >;
@@ -132,7 +141,7 @@
    &trans   &kp EXCL    &kp AT    &kp LBRC &kp RBRC &kp PIPE        &kp AMPS  &kp ASTRK &kp LT    &kp GT    &kp SQT   &trans
    &trans   &kp HASH    &kp DLLR  &kp LPAR &kp RPAR &kp GRAVE       &kp MINUS &kp EQUAL &kp PLUS  &kp UNDER &kp SEMI  &trans
    &trans   &kp PRCNT   &kp CARET &kp LBKT &kp RBKT &kp TILDE       &kp BSLH  &kp COLON &kp COMMA &kp DOT   &kp FSLH  &trans
-   &trans   &trans      &trans    &trans   &trans   &trans          &trans    &trans    &trans    &trans    &trans    &trans
+   &kp LT   &kp GT      &trans    &trans   &trans   &trans          &trans    &trans    &trans    &trans    &trans    &trans
           >;
       };
 
@@ -141,7 +150,7 @@
    &trans   &none     &none     &none     &none     &none         &none           &kp PG_UP &kp UP   &none     &kp INS    &trans
    &trans   &kp LCTRL &kp LALT  &kp LGUI  &kp LSHFT &none         &kp HOME        &kp LEFT  &kp DOWN &kp RIGHT &kp END    &trans
    &trans   &kp LG(Z) &kp LG(X) &kp LG(C) &kp K_APP &kp LG(V)     &kp LS(LC(TAB)) &kp PG_DN &none    &none     &kp LC(TAB) &trans
-   &trans   &trans    &trans    &trans    &trans    &kp DEL       &kp TAB         &trans    &trans   &trans    &trans     &trans
+   &trans   &trans    &trans    &trans    &kp DEL    &trans       &trans        &kp TAB   &trans   &trans    &trans     &trans
             >;
       };
 
@@ -150,7 +159,7 @@
    &trans   &kp F1    &kp F2    &kp F3    &kp F4    &none         &none     &kp N7    &kp N8    &kp N9    &kp N0   &trans
    &trans   &kp F5    &kp F6    &kp F7    &kp F8    &none         &none     &kp N4    &kp N5    &kp N6    &none    &trans
    &trans   &kp F9    &kp F10   &kp F11   &kp F12   &none         &none     &kp N1    &kp N2    &kp N3    &none    &trans
-   &trans   &trans    &trans    &trans    &trans    &trans        &none     &kp N0    &kp DOT   &trans    &trans   &trans
+   &trans   &trans    &trans    &trans    &trans    &trans        &none     &none     &kp N0    &kp DOT   &trans   &trans
            >;
       };
         win_layer {
