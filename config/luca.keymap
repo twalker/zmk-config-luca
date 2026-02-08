@@ -107,7 +107,7 @@
 
         combo_capsword {
               timeout-ms = <50>;
-              key-positions = <16 19>;
+              key-positions = <13 16>;
               bindings = <&caps_word>;
         };
     };
@@ -126,7 +126,7 @@
  * |   Z  |   X  |   C  |   D  |   V  |                |   K  |   H  |   ,  |   .  |   /  |
  * `----------------------------------'                `----------------------------------'
    ,-----------------------------------------.  ,-----------------------------------------.
- * |  ?   |   ?  |  NUM | SYM |  NAV |  MSE  |  |  ESC | NAV  | VIM  | WIN  |  ?   |  ?   |
+ * |   ↑  |   ↓  |  NUM | SYM |  NAV |  MSE  |  |  ESC | NAV  | VIM  | WIN  |   ←  |  →   |
  * `-----------------------------------------'  `-----------------------------------------'
  */
 
@@ -134,7 +134,7 @@
            &kp Q       &kp W       &kp F       &kp P       &kp B           &lt MSE J &kp L     &kp U       &kp Y       &kp SQT
            &hml LCTRL A &hml LALT R  &hml LGUI S  &hml LSHFT T &kp G       &kp M   &hmr RSHFT N &hmr RGUI E  &hmr LALT I  &hmr RCTRL O
            &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K   &kp H       &kp COMMA   &kp DOT     &kp FSLH
-    &kp HASH &kp ASTRK &mo NUM    &lt SYM ESC &lt NAV BSPC &mo MSE &lt MSE ESC &lt NAV SPACE &lt VIM ENTER &mo WIN &kp LG(LS(LBKT)) &kp LG(LS(RBKT))
+    &kp HASH &kp ASTRK &mo NUM  &mo SYM  &lt NAV BSPC &mo MSE   &lt MSE ESC &lt NAV SPACE &lt VIM ENTER &mo WIN &kp LG(LS(LBKT)) &kp LG(LS(RBKT))
             >;
         };
 
