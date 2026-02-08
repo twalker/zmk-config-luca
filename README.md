@@ -21,11 +21,11 @@ Good position.
 * Adding lower keys: Yes, must have.
 
 #### 6th column
-* TBD
+* TBD -- Nope. Don't need it, just move escape.
 
 ### Displays
 
 * YAGNI, or just on the left (primary half)
 
 ### 35g Ambients
-TBD
+TBD - A little stiff, but I like them as much if not more than the twighlights (35g).
